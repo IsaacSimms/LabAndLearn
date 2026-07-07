@@ -41,7 +41,9 @@ resource storageAccounts_salearndeveus001_name_resource 'Microsoft.Storage/stora
           enabled: true
         }
         blob: {
-          keyType: 'Account'
+          keyType: '
+          
+          Account'
           enabled: true
         }
       }
