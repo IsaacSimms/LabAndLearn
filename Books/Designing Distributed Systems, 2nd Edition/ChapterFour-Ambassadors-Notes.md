@@ -6,7 +6,7 @@ Like the sidecar pattern, the Ambassador pattern is a single node pattern. This 
 ## Outline
 ### Core
 App and abassador container in same pod
-Amabassador is a traffic broker. A well built ambassador is reusable accross many different applications.
+Ambassador is a traffic broker. A well built ambassador is reusable accross many different applications.
 Application only knows localhost
 
 ### Value
@@ -21,4 +21,4 @@ If you are going to shard some infrastructure ambassadors help centralize the co
 Let's say you are a/b testing an api change. An ambassador handles the routing, so you could split traffic at the ambassador container and have 90% go one way then the other 10% go the other.
 
 ## Summary
-Ambassadors are a container that runs alongside the workload in the same pod and brokers all communication with the external network. It handles complex networking logic such as discoery, routing, and request splitting on behalf of the workload. The standard pattern involves the workload communicating with teh ambassador through localhost. As far as what type of logic it handles, ambassador containers remind me of gateways in Azure in a lot of ways. Although gateways are multi-node, centralized services where amabassador containers are single-node per instance architecture.
+Ambassadors are a container that runs alongside the workload in the same pod and brokers all communication with the external network. It handles complex networking logic such as discoery, routing, and request splitting on behalf of the workload. The standard pattern involves the workload communicating with teh ambassador through localhost. As far as what type of logic it handles, ambassador containers remind me of gateways in Azure in a lot of ways. Although gateways are multi-node, centralized services where ambassador containers are single-node per instance architecture.

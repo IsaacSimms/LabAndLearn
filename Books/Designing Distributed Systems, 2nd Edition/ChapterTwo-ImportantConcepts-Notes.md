@@ -24,8 +24,8 @@ Use 90th or 99th (as examples) of total dataset to get better idea of actual use
 
 ### Idempotency
 The concept that doing the same action many times causes the same result
-int x = 5; Console.WriteLine(x); // indempotent
-int x = 5; x + 1; Console.WriteLine(x); // not indempotent due to the increment
+int x = 5; Console.WriteLine(x); // idempotent
+int x = 5; x + 1; Console.WriteLine(x); // not idempotent due to the increment
 
 ### Return Semantics
 At-least-once = delivery happens one more more times
@@ -33,7 +33,7 @@ At-most-once = delivery happens one or zero times
 
 ### Relational Integrity 
 The more relational, the more of a guarantee theres is consistenty of related data accross stores. The more relational a data set is, the less performant it is. (generally)
-SQL = strong relationality... no-SQL = weak relationality
+SQL = strong relationally... no-SQL = weak relationally
 
 ### Data Consistency
 Strong = data is the same in all places before a success is posted
