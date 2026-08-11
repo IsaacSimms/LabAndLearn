@@ -1,4 +1,4 @@
-# Notes from Chapter Six - Replicated Load Balanced Services - Notes
+# Notes from Chapter Six - Replicated Load Balanced Services
 
 ## TL;DR
 This chapter signifies the departure from single node architecture. Here, we look a pattern that involves identical replicas of a service (server replicas more specifically). 
@@ -48,4 +48,4 @@ Often times different certs for edge, internal, and development services to get 
 Often times production infrastructure is going to take a layered approach with multiple of these layers working in tandem. Multiple layers are passed through before a client request could
 ever get to a application replica. 
 Example:
-external rquest --> SSL termination wall (nginx) --> a caching layer such as Varnish servers --> application replicas. 
+external request --> SSL termination wall (nginx) --> a caching layer such as Varnish servers --> application replicas. 

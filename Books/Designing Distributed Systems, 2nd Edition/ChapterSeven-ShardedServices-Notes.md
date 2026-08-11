@@ -1,4 +1,4 @@
-# Notes from Chapter Seven - Sharded Services - notes
+# Notes from Chapter Seven - Sharded Services
 
 ## TL;DR
 Think about chapter six replicated load balances services. That is multiple identical replicas of the same servicess accross multiple services behind a load balancer. Any one replica is able to handle any request.

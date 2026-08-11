@@ -1,4 +1,4 @@
-# Notes from Chapter Five - Adapter Pattern - notes
+# Notes from Chapter Five - Adapter Pattern
 
 ## TL;DR
 Like what has been previously discussed with Sidecars and Ambassadors, adapters are a single-node pattern. They sit in the same pod as the workload and provide some sort of augment to the application container. In the case of adapters that augment revolves around the interface. The adapter will take the provided interface and seams from the workload as it stands and translate that into the interface that is expected by another service. It is common to have containers outside of the primary workload to provide some sort of service such as logging or health checks that require robust interaction with the workload itself. The adapter sits in the middle of those two pieces and makes sure that communication is successful and efficient.

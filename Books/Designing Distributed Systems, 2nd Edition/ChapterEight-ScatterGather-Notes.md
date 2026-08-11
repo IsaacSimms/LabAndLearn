@@ -1,4 +1,4 @@
-# Notes from Chapter Eight - Scatter/Gather pattern - Notes
+# Notes from Chapter Eight - Scatter/Gather pattern
 
 ## TL;DR
 Scatter/gather is a form of replication system that focuses on scalability and efficiently in terms of time.

@@ -1,4 +1,4 @@
-# Notes from Chapter One - Introduction - notes
+# Notes from Chapter One - Introduction 
 
 ## TL;DR
 Modern computing environments demand availability, reliability, and the ability to scale at insane rates. This forces production systems into a distributed context in most circumstances. Building these systems has been historally difficuult, and bespoke with a small class of humans able to perform at a very high level. Containers, orchestrators, and related infrastructure has provided us with the building blocks to reuse, share, and modify established architecture. (Think what OOP did for programming) This book focuses in on general must knows for the art of distributed systems and more specifically, commonly used patterns. 

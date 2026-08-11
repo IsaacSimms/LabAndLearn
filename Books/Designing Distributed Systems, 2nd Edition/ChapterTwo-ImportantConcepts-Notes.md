@@ -1,4 +1,4 @@
-# Chapter 2 - Important Distributed System Concepts - notes
+# Notes from Chapter 2 - Important Distributed System Concepts
 
 ## TL;DR
 This chapter revolved around core concepts and things that you must understand before designing distributed systems. Wiring (APIs/RPCs), measuring (latency, reliability, precentiles), failure handling (idempotency and delivery guarantees), data correction (relational and consistency data models), orchestrators, health checks.
