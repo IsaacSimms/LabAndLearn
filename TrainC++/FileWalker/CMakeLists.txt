@@ -7,5 +7,3 @@ set (CMAKE_CXX_EXTENSIONS OFF)
 set (CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(FileWalker main.cpp)
-
-target_compile_options(FileWalker PRIVATE -Wall -Wextra -Wpedantic) 
