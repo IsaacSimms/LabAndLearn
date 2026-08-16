@@ -1,0 +1,3 @@
+C:/LabAndLearn/LabAndLearn/TrainC++/HelloWorld/build/CMakeFiles/HelloWorld.dir
+C:/LabAndLearn/LabAndLearn/TrainC++/HelloWorld/build/CMakeFiles/edit_cache.dir
+C:/LabAndLearn/LabAndLearn/TrainC++/HelloWorld/build/CMakeFiles/rebuild_cache.dir
