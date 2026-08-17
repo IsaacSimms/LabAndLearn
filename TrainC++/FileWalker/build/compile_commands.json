@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/LabAndLearn/LabAndLearn/TrainC++/FileWalker/build",
-  "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi /FoCMakeFiles\\FileWalker.dir\\main.cpp.obj /FdCMakeFiles\\FileWalker.dir\\ /FS -c C:\\LabAndLearn\\LabAndLearn\\TrainC++\\FileWalker\\main.cpp",
-  "file": "C:/LabAndLearn/LabAndLearn/TrainC++/FileWalker/main.cpp",
-  "output": "C:/LabAndLearn/LabAndLearn/TrainC++/FileWalker/build/CMakeFiles/FileWalker.dir/main.cpp.obj"
-}
-]
