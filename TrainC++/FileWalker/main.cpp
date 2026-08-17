@@ -4,6 +4,7 @@
 
 // == include headers == //
 #include <iostream>
+#include "FileConcat.hpp"
 
 
 // == entry point == //
