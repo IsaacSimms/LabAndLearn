@@ -1,6 +1,6 @@
 # Windows + VS Code C++ Development Environment
 
-CMake + Ninja + a compiler. This is the stack used under `TrainC++/`. Same three commands every project.
+CMake + Ninja + MSVC compiler + LLVM linker. Same three commands every project.
 
 ---
 
@@ -10,8 +10,8 @@ CMake + Ninja + a compiler. This is the stack used under `TrainC++/`. Same three
 | --- | --- |
 | **CMake** | Build-system *generator*. Reads `CMakeLists.txt`, picks a compiler, writes a recipe. Does **not** compile your code. |
 | **Ninja** | Fast task *runner*. Reads `build.ninja` and runs the compile/link **commands**. |
-| **clang++** | The LLVM C++ compiler and linker. Only used if you ask for it (or it is first on `PATH`). |
 | **cl.exe** | The Visual Studio C++ compiler. What this environment uses by default once the VS Dev Shell is wired into VS Code. |
+| **clang++** | The LLVM C++ compiler and linker. Only used if you ask for it (or it is first on `PATH`). (not required on WinOS if you run the MSVC compiler) | 
 
 CMake decides *what* to build and *with what*. Ninja *runs* that recipe. The compiler is a third thing. Mixing them up is how you get a surprise toolchain.
 
@@ -220,19 +220,17 @@ Expected output:
 ```
 Hello, World!
 ```
-
-Do **not** double-click it in Explorer if you want to see the text. A console program prints and exits; the window closes immediately. Run it from a terminal.
-
 ---
 
-## What CMake actually picked (the important surprise)
+## What CMake actually picks on WinOS 
 
-You can install LLVM and expect `clang++`. CMake will not use it just because it is installed.
+You can install LLVM and expect `clang++`. But, CMake will not use it just because it is installed.
 
 CMake's rule on Windows: walk `PATH`, take the **first working C++ compiler**. Visual Studio Build Tools / the Dev Shell make `cl.exe` visible, so it takes `cl.exe`. LLVM binutils may also be visible, so the linker can become `lld-link`. That is a **mixed toolchain**. It is not "an LLVM build."
 
 Typical first-configure result (from `build/CMakeCache.txt` / `CMakeCXXCompiler.cmake`), *before* the x64 Dev Shell profile:
 
+## Current setup
 | Role | Tool it used |
 | --- | --- |
 | C++ compiler | MSVC `cl.exe` (`Hostx86/x86`, 32-bit) |
@@ -249,7 +247,7 @@ Always open `build/CMakeCache.txt` after configure and check `CMAKE_CXX_COMPILER
 
 ## Force Clang instead of cl
 
-Say so at configure time. **Delete `build/` first** so the old cache cannot win:
+Say so at configure time. **Delete `build/` first** if one exists, so the old cache cannot win:
 
 ```powershell
 Remove-Item -Recurse -Force build
@@ -329,4 +327,3 @@ CMakeLists.txt + compiler on PATH
                 ▼
      build/<TargetName>.exe
 ```
-)
